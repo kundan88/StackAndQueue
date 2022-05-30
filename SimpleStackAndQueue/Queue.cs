@@ -8,7 +8,6 @@ namespace StackAndQueue
         {
             linkedList = new LinkedList();
         }
-
         public void Enqueue(int data)
         {
             linkedList.AppendNode(data);
@@ -17,6 +16,10 @@ namespace StackAndQueue
         {
             Console.WriteLine("In queue -");
             linkedList.Display();
+        }
+        public void Dequeue()
+        {
+            linkedList.DeleteNodeAtFirst();
         }
     }
 }
