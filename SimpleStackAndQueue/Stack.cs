@@ -17,6 +17,31 @@ namespace SimpleStackAndQueue
             Console.WriteLine("Stack elements are");
             linkedList.Display();
         }
+        public void Peek()
+        {
+            var top = linkedList.head;
+            Console.WriteLine("Top element is " + top.data);
+        }
+        public void Pop()
+        {
+            if (linkedList.head == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            else
+            {
+                Console.WriteLine("Poped " + linkedList.head.data);
+                linkedList.head = linkedList.head.next;
+            }
+        }
+        public void IsEmpty()
+        {
+            while (linkedList.head != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
     }
 }
 

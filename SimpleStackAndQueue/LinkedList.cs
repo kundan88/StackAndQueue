@@ -43,7 +43,7 @@ namespace SimpleStackAndQueue
             Node temp = head;
             if (temp == null)
             {
-                Console.WriteLine("Linked list is Empty");
+                Console.WriteLine("Empty");
             }
             else
             {
@@ -83,22 +83,22 @@ namespace SimpleStackAndQueue
         }
         public void DeleteNodeAtFirst()
         {
-            if (this.head == null)
+            if (head == null)
             {
-                Console.WriteLine("List is empty");
+                Console.WriteLine("Empty");
             }
             else
             {
-                Node temp = this.head;
-                this.head = this.head.next;
+                Node temp = head;
+                head = head.next;
                 Console.WriteLine("Removed from list " + temp.data);
             }
         }
         public void DeleteEndNode()
         {
-            if (this.head == null)
+            if (head == null)
             {
-                Console.WriteLine("List is empty");
+                Console.WriteLine("Empty");
             }
             else
             {
@@ -108,84 +108,6 @@ namespace SimpleStackAndQueue
                     temp = temp.next;
                 }
                 temp.next = null;
-            }
-        }
-        public Node Search(int data)
-        {
-            Node temp = this.head;
-            while (temp != null)
-            {
-                if (temp.data == data)
-                {
-                    return temp;
-                }
-                temp = temp.next;
-            }
-            return null;
-        }
-        public void Insert(int data, int dataBefore)
-        {
-            Node node = new Node(data);
-
-            if (this.head == null)
-                this.head = this.tail = node;
-            else
-            {
-                Node nodeBefore = this.Search(dataBefore);
-                if (nodeBefore != null)
-                {
-                    node.next = nodeBefore.next;
-                    nodeBefore.next = node;
-                    if (nodeBefore == this.tail)
-                        this.tail = node;
-                }
-            }
-        }
-        public void DeleteNode(int data)
-        {
-            if (this.head == null)
-            {
-                System.Console.WriteLine("Empty");
-            }
-            else
-            {
-                Node node = this.Search(data);
-
-                if (node == null)
-                {
-                    System.Console.WriteLine("Not found");
-                }
-                else if (node == this.head)
-                {
-                    this.head = this.head.next;
-                    if (node == this.tail)
-                    {
-                        tail = null;
-                    }
-                }
-                else
-                {
-                    Node nodeBefore = null;
-                    Node temp = this.head;
-                    while (temp != null)
-                    {
-                        if (temp.next == node)
-                        {
-                            nodeBefore = temp;
-                            break;
-                        }
-                        temp = temp.next;
-                    }
-                    nodeBefore.next = node.next;
-                    if (node == this.tail)
-                    {
-                        this.tail = nodeBefore;
-                    }
-                    else
-                    {
-                        node.next = null;
-                    }
-                }
             }
         }
     }
