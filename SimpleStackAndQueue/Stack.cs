@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SimpleStackAndQueue
+namespace StackAndQueue
 {
     internal class Stack
     {

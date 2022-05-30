@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SimpleStackAndQueue
+namespace StackAndQueue
 {
     class Node
     {
@@ -49,7 +49,12 @@ namespace SimpleStackAndQueue
             {
                 while (temp != null)
                 {
-                    Console.WriteLine(temp.data);
+                    Console.Write(temp.data);
+                    if (temp.next != null)
+                    {
+                        Console.Write("->");
+                    }
+
                     temp = temp.next;
                 }
             }
