@@ -23,6 +23,15 @@ namespace StackAndQueue
                 head = node;
             }
         }
+        public void Empty()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Console.WriteLine("Value Poped is {0}", head.data);
+            head = head.next;
+        }
         public void Display()
         {
             //temp variable will be head

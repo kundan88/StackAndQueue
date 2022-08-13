@@ -14,6 +14,13 @@
             stack.Push(node2);
             stack.Push(node3);
             stack.DisplayStack();
+
+            stack.Pop(node1);
+            stack.DisplayStack();
+            stack.Pop(node2);
+            stack.DisplayStack();
+            stack.Pop(node3);
+            stack.DisplayStack();
         }
     }
 }
