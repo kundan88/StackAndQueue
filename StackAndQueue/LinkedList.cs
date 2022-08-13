@@ -53,6 +53,14 @@ namespace StackAndQueue
             }
             Console.WriteLine("Added node to the Queue :" + data);
         }
+        public void RemoveStart()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            head = head.next;
+        }
         public void Display()
         {
             //temp variable will be head

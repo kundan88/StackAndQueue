@@ -13,16 +13,14 @@ namespace StackAndQueue
         {
             linked.Append(data);
         }
-        public void DisplayQueue()
+        public void Dequeue()
         {
-            Console.WriteLine("\nQueue: ");
-            linked.Display();
+            linked.RemoveStart();
         }
-        public void GetInfo()
+        public void DisplayQueue()
         {
             Console.WriteLine("\nQueue: ");
             linked.Display();
         }
     }
 }
-

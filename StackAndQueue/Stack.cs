@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackAndQueue
 {
-    public class Stack
+    internal class Stack
     {
         LinkedList linkedList = new LinkedList();
         public void Push(Node node)
@@ -25,4 +25,3 @@ namespace StackAndQueue
         }
     }
 }
-

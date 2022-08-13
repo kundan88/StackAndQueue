@@ -13,8 +13,8 @@ namespace StackAndQueue
 
         public Node(int data)
         {
-            this.data = data;                             //stores the info
-            this.next = null;                            //stores next node positon
+            this.data = data;           //stores the info
+            this.next = null;           //stores next node positon
         }
     }
 }
